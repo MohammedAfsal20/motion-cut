@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.ev-slider-container {
+    max-width: 850px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ev-slider-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.2em;
+    color: #333;
+    background-color: #e0f7fa;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.ev-slider-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.ev-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+}
+
+.ev-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.ev-slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.ev-prev-slide, .ev-next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.ev-prev-slide:hover, .ev-next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ev-prev-slide {
+    left: 15px;
+}
+
+.ev-next-slide {
+    right: 15px;
+}
+
+.ev-slider-dots {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.ev-dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ev-dot.active {
+    background-color: #00bcd4;
+}
